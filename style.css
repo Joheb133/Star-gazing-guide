@@ -20,6 +20,12 @@ h1 {
     align-items: center;
 }
 
+.locations{
+    width: 1680px;
+    height: 662px;
+    overflow-y: auto;
+}
+
 .locations-items {
     display: flex;
     align-items: center;
