@@ -1,0 +1,54 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fcfcfc;
+}
+
+h1 {
+    margin: 0;
+}
+
+.locations-section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #1C1C1C;
+    justify-content: center;
+    align-items: center;
+}
+
+.locations-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.locations-items figure img {
+    width: 1106px;
+    height: 622px;
+    object-fit: cover;
+    object-position: 50% 30%;
+    border-radius: 12px;
+}
+
+.locations figcaption {
+    margin-top: 16px;
+}
+
+.locations-items figcaption img{
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    vertical-align: bottom;
+}
+
+.locations-content p {
+    width: 528px;
+}
+
+.locations-content h1 {
+    font-size: 4em;
+}
