@@ -7,6 +7,10 @@ new Swiper(".locations", {
         el: '.swiper-pagination',
         type: 'fraction'
     },
+    navigation: {
+        nextEl: "#nav-down",
+        prevEl: "#nav-up"
+    },
     speed: 800,
     loop: true,
     simulateTouch: false,
