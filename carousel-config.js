@@ -15,3 +15,17 @@ new Swiper(".locations", {
     loop: true,
     simulateTouch: false,
 });
+
+new Swiper(".telescopes", {
+    direction: 'horizontal',
+    slidesPerView: 3,
+    spaceBetween: 44,
+    centeredSlides: true,
+    navigation: {
+        nextEl: "#telescopes-next",
+        prevEl: "#telescopes-prev"
+    },
+    loop: true,
+    speed: 500,
+    simulateTouch: false,
+});

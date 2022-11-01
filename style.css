@@ -15,8 +15,6 @@ h1 {
     background-color: #1C1C1C;
 }
 
-
-
 /* --> Guide section*/
 .guide-section {
     width: 100%;
@@ -125,3 +123,50 @@ h1 {
     opacity: 0.5;
     cursor: pointer;
 } 
+
+/* Telescopes section*/
+
+.telescopes-section {
+    background-color: #222222;
+    padding: 36px 0;
+}
+
+.telescopes-section h1 {
+    margin: 32px 0;
+    text-align: center;
+}
+
+.telescopes-section .slider-container {
+    max-width: 1480px;
+    margin: auto;
+    position: relative;
+}
+
+.telescopes {
+    width: 1132px;
+    height: 568px;
+    border-radius: 36px;
+}
+
+.telescopes .cards {
+    background-color: #8d3c3c;
+    border-radius: 36px;
+}
+
+.telescopes-section .swiper-custom-nav {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    min-width: 100%;
+    z-index: 10;
+}
+
+#telescopes-prev {
+    float: left;
+}
+
+#telescopes-next {
+    float: right;
+}
