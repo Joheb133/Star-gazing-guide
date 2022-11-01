@@ -18,7 +18,7 @@ new Swiper(".locations", {
 
 new Swiper(".telescopes", {
     direction: 'horizontal',
-    slidesPerView: 3,
+    slidesPerView: 3.05,
     spaceBetween: 44,
     centeredSlides: true,
     navigation: {
