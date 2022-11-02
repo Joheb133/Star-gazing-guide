@@ -18,7 +18,7 @@ new Swiper(".locations", {
 
 new Swiper(".telescopes", {
     direction: 'horizontal',
-    slidesPerView: 3.05,
+    slidesPerView: "auto",
     spaceBetween: 44,
     centeredSlides: true,
     navigation: {
@@ -29,3 +29,26 @@ new Swiper(".telescopes", {
     speed: 500,
     simulateTouch: false,
 });
+
+new Swiper(".gallery-top", {
+    direction: "horizontal",
+    slidesPerView: "auto",
+    loop: true,
+    autoplay: {
+        disableOnInteraction: false
+    },
+    simulateTouch: false,
+    speed: 800,
+})
+
+new Swiper(".gallery-bottom", {
+    direction: "horizontal",
+    slidesPerView: "auto",
+    loop: true,
+    autoplay: {
+        reverseDirection: true,
+        disableOnInteraction: false
+    },
+    simulateTouch: false,
+    speed: 800,
+})
