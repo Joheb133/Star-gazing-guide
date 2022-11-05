@@ -77,6 +77,54 @@ h1 {
     position: relative;
 }
 
+#stars {
+    width: 100%;
+}
+
+#stars line {
+    opacity: 0;
+}
+
+#stars circle {
+    filter: drop-shadow(0 0 0.5rem rgb(255, 255, 255));
+}
+
+#canes-venatici line {
+    animation-name: stars-animation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#little-dipper line {
+    animation-name: stars-animation;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+#big-dipper line {
+    animation-name: stars-animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+#ursa-major > line{
+    animation-name: stars-animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+@keyframes stars-animation {
+    from, to {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.2;
+    }
+}
+
 #telescope-svg {
     position: absolute;
     bottom: 0;
@@ -86,7 +134,6 @@ h1 {
 
 #telescope-svg-top {
     transform-origin: 35% 66%;
-    transform: rotate(10deg);
 }
 /* --> Guide section*/
 .guide-section {
