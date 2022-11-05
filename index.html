@@ -8,16 +8,65 @@
     <title>Stargazing Guide</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
     <script src="carousel-config.js" defer></script>
+    
 </head>
 
 <body>
     <section class="home-section">
         <!--Home-->
-        <p style="margin: 0">Home</p>
+        <div class="left-bg">
+            <div class="bg-text">
+                <span>Guide to</span>
+                <h1>Stargazing</h1>
+                <span>in Ireland</span>
+            </div>
+            <div class="cta">
+                <a href="#guide-section">
+                    <svg width="29" height="65" viewBox="0 0 29 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="27" height="65" rx="13.5" stroke="white" stroke-width="2" />
+                        <ellipse cx="14.5" cy="16" rx="9.5" ry="9" fill="white" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="right-bg">
+            <h1>Check</h1>
+            <svg id="telescope-svg" width="200" height="200" viewBox="-100 -10 650 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                <g id="telescope-svg-top">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M326.598 19.3778C314.867 24.25 309.307 37.7096 314.179 49.4406L314.54 50.309L103.901 137.832C97.7804 140.375 94.8806 147.397 97.4235 
+                        153.518L104.961 171.658L44.3132 196.43C40.9558 188.299 31.656 184.399 23.4975 187.717L9.9765 193.216C1.791 196.545 -2.14595 205.88 1.18308 214.065L18.8866 257.595C22.2156 265.781 
+                        31.55 269.718 39.7355 266.389L53.2565 260.89C61.442 257.561 65.3789 248.226 62.0499 240.041L61.6962 239.171L122.666 214.268L130.576 233.306C133.119 239.426 140.142 242.326 146.262 
+                        239.783L203.499 216.001C200.515 212.029 198.582 207.223 198.112 201.996L143.277 224.78L112.426 150.532L320.293 64.1617L351.133 138.414L246.591 181.852C249.793 185.674 251.975 190.38 
+                        252.718 195.55L356.886 152.267L357.269 153.189C362.141 164.92 375.601 170.48 387.332 165.608L432.879 146.69C435.939 145.419 437.39 141.908 436.119 138.848L431.247 127.117C454.579 
+                        110.664 463.875 79.3756 452.09 51.8891C440.501 24.8583 412.193 10.0592 384.623 14.8617L379.988 3.70018C378.717 0.639921 375.206 -0.810537 372.145 0.460485L326.598 19.3778ZM366.887 
+                        24.3007L334.269 37.848C332.739 38.4836 332.014 40.2391 332.649 41.7692L375.739 145.517C376.375 147.048 378.13 147.773 379.661 147.137L412.279 133.59L366.887 24.3007ZM117.294 
+                        201.339L56.4219 226.203L49.5877 209.398L110.333 184.587L117.294 201.339ZM439.223 57.4058C447.966 77.7979 441.779 100.674 425.698 113.757L390.174 28.2251C410.379 26.1257 430.635 
+                        37.3748 439.223 57.4058ZM28.7717 200.686L15.2508 206.185C14.2276 206.601 13.7355 207.768 14.1516 208.791L31.8551 252.321C32.2712 253.344 33.438 253.836 34.4612 253.42L47.9822 
+                        247.921C49.0054 247.505 49.4975 246.338 49.0814 245.315L31.3778 201.785C30.9617 200.762 29.7949 200.27 28.7717 200.686Z" fill="white" />
+                    <path d="M309.692 102.214C313.296 100.813 315.081 96.7557 313.679 93.1526C312.278 89.5495 308.221 87.7645 304.618 89.1657L286.618 96.1657C283.015 97.5669 281.23 101.624 282.631 
+                        105.227C284.033 108.83 288.089 110.615 291.692 109.214L309.692 102.214Z" fill="white" />
+                    <path d="M270.636 110.043C272.097 113.622 270.381 117.708 266.802 119.17L195.802 148.17C192.223 149.632 188.137 147.916 186.675 144.337C185.213 140.758 186.93 136.671 190.508 
+                        135.209L261.508 106.209C265.087 104.748 269.174 106.464 270.636 110.043Z" fill="white" />
+                </g>
+                <g id="telescope-svg-bottom">
+                    <path
+                        d="M225.5 207.5C229.918 207.5 233.5 203.918 233.5 199.5C233.5 195.082 229.918 191.5 225.5 191.5C221.082 191.5 217.5 195.082 217.5 199.5C217.5 203.918 221.082 207.5 225.5 207.5Z"
+                        fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M243.879 225.086C251.825 219.367 257 210.038 257 199.5C257 182.103 242.897 168 225.5 168C208.103 168 194 182.103 194 199.5C194 210.36 
+                        199.496 219.937 207.858 225.6L123.037 452.905C121.589 456.786 123.561 461.106 127.442 462.554C131.323 464.002 135.643 462.03 137.091 458.149L162.148 391H289.29L314.089 458.006C315.526
+                        461.89 319.841 463.874 323.726 462.436C327.61 460.999 329.594 456.684 328.156 452.799L243.951 225.273C243.927 225.21 243.903 225.148 243.879 225.086ZM225.5 216C234.613 216 242 208.613 
+                        242 199.5C242 190.387 234.613 183 225.5 183C216.387 183 209 190.387 209 199.5C209 208.613 216.387 216 225.5 216ZM283.739 376H167.745L221.909 230.851L221.928 230.8C223.1 230.932 
+                        224.292 231 225.5 231C227.014 231 228.503 230.893 229.96 230.687L283.739 376Z" fill="white" />
+                </g>
+            </svg>
+        </div>
     </section>
-    <section class="guide-section">
+    <section class="guide-section" id="guide-section">
         <!--Guide-->
         <div class="guide-content-wrap">
             <img id="guide-banner" src="img/starry-night-lake.jpg" alt="Lake under starry sky">
@@ -430,14 +479,18 @@
         <div class="gallery-wrapper">
             <div class="swiper gallery-top">
                 <div class="swiper-wrapper">
-                    <img src="img/pexels-thirdman-8495471.jpg" alt="Person stargazing" class="swiper-slide long-img"></img>
-                    <img id="under-milkyway" src="img/pexels-egil-sjøholt-1906658.jpg" alt="Man under milkyway" class="swiper-slide short-img"></img>
+                    <img src="img/pexels-thirdman-8495471.jpg" alt="Person stargazing"
+                        class="swiper-slide long-img"></img>
+                    <img id="under-milkyway" src="img/pexels-egil-sjøholt-1906658.jpg" alt="Man under milkyway"
+                        class="swiper-slide short-img"></img>
                 </div>
             </div>
             <div class="swiper gallery-bottom">
                 <div class="swiper-wrapper">
-                    <img src="img/pexels-rakicevic-nenad-1274260.jpg" alt="Galaxy in a jar" class="swiper-slide short-img"></img>
-                    <img id="mountain-stars" src="img/pexels-drift-shutterbug-2085998.jpg" alt="Mountain under stars" class="swiper-slide long-img"></img>
+                    <img src="img/pexels-rakicevic-nenad-1274260.jpg" alt="Galaxy in a jar"
+                        class="swiper-slide short-img"></img>
+                    <img id="mountain-stars" src="img/pexels-drift-shutterbug-2085998.jpg" alt="Mountain under stars"
+                        class="swiper-slide long-img"></img>
                 </div>
             </div>
         </div>
