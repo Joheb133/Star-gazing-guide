@@ -86,7 +86,19 @@ h1 {
 }
 
 #stars circle {
-    filter: drop-shadow(0 0 0.5rem rgb(255, 255, 255));
+    animation-name: star-glow;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes star-glow {
+    from, to {
+        filter: drop-shadow(0 0 0.5rem rgb(255, 255, 255));
+    }
+    50% {
+        filter: drop-shadow(0 0 0.1rem rgb(255, 255, 255));
+    }
 }
 
 #canes-venatici line {
@@ -171,7 +183,6 @@ h1 {
     float: right;
     margin-left: 32px;
 }
-
 
 /* --> Locations section*/
 .locations-section {

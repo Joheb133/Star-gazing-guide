@@ -1,3 +1,5 @@
+
+//telescope following mouse animation
 const homeEl = document.querySelector('.home-section');
 const telescopeTop = document.querySelector('#telescope-svg-top');
 const anchor = document.querySelector('#telescope-svg');
@@ -30,4 +32,22 @@ function angle(cx, cy, ex, ey) {
     const rad = Math.atan2(dy, dx);
     const deg = rad * 180 / Math.PI;
     return deg
+}
+
+
+//guide read more animation
+const hiddenGuide = document.querySelector(".hidden-para");
+const hiddenGuideTl = gsap.timeline()
+
+hiddenGuide.style.display = "none"
+
+function showHiddenContent() {
+    if(hiddenGuideTl.isActive()) { return };
+    if (hiddenGuide.style.display === "none"){
+        hiddenGuide.style.display = "block";
+        hiddenGuideTl.fromTo(".hidden-para p", 1.5, {y: -150}, {y: 0, ease: Power2.easeInOut})
+        .fromTo(hiddenGuide, 2, { opacity: "0"}, {opacity: "100%", ease: Power2.easeInOut}, "-=1")
+    } else {
+        hiddenGuide.style.display = "none"
+    }
 }

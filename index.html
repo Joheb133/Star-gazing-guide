@@ -8,9 +8,10 @@
     <title>Stargazing Guide</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="carousel-config.js" defer></script>
+    <script src="main.js" defer></script>
 
 </head>
 
@@ -33,8 +34,7 @@
             </div>
         </div>
         <div class="right-bg">
-            <svg id="stars" viewBox="0 0 1400 800" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+            <svg id="stars" viewBox="0 0 1400 800" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="canes-venatici">
                     <circle cx="268" cy="237" r="3" fill="#FFFFFF" />
                     <circle cx="307.5" cy="277.5" r="1.5" fill="#FFFFFF" />
@@ -200,7 +200,29 @@
                 turpis. Maecenas nunc nibh lobortis tortor. Dictum morbi in maecenas faucibus pretium. Ut orci amet, nec
                 sem velit.
             </p>
-
+            <button onclick="showHiddenContent()">Read more</button>
+            <div class="hidden-para">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod eget porta mi at. Quis ac ac
+                    orci
+                    in neque, egestas commodo enim. Penatibus scelerisque tortor at dignissim sit feugiat ut faucibus.
+                    Turpis nibh etiam venenatis venenatis, id libero diam.
+                    Nibh parturient suscipit curabitur fringilla odio nunc at lectus. Adipiscing et mauris mi a egestas
+                    turpis. Maecenas nunc nibh lobortis tortor. Dictum morbi in maecenas faucibus pretium. Ut orci amet,
+                    nec
+                    sem velit.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod eget porta mi at. Quis ac ac
+                    orci
+                    in neque, egestas commodo enim. Penatibus scelerisque tortor at dignissim sit feugiat ut faucibus.
+                    Turpis nibh etiam venenatis venenatis, id libero diam.
+                    Nibh parturient suscipit curabitur fringilla odio nunc at lectus. Adipiscing et mauris mi a egestas
+                    turpis. Maecenas nunc nibh lobortis tortor. Dictum morbi in maecenas faucibus pretium. Ut orci amet,
+                    nec
+                    sem velit.
+                </p>
+            </div>
         </div>
     </section>
     <section class="locations-section">
