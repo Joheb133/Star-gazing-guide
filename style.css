@@ -93,9 +93,12 @@ h1 {
 }
 
 @keyframes star-glow {
-    from, to {
+
+    from,
+    to {
         filter: drop-shadow(0 0 0.5rem rgb(255, 255, 255));
     }
+
     50% {
         filter: drop-shadow(0 0 0.1rem rgb(255, 255, 255));
     }
@@ -121,7 +124,7 @@ h1 {
     animation-timing-function: ease-out;
 }
 
-#ursa-major > line{
+#ursa-major>line {
     animation-name: stars-animation;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -129,9 +132,12 @@ h1 {
 }
 
 @keyframes stars-animation {
-    from, to {
+
+    from,
+    to {
         opacity: 0;
     }
+
     50% {
         opacity: 0.2;
     }
@@ -147,6 +153,7 @@ h1 {
 #telescope-svg-top {
     transform-origin: 35% 66%;
 }
+
 /* --> Guide section*/
 .guide-section {
     width: 100%;
@@ -156,32 +163,43 @@ h1 {
     background-color: #222222;
 }
 
-.guide-content-wrap {
-    width: 1270px;
+.guide-wrap {
+    width: 980px;
     height: auto;
-    padding: 16px 16px;
+    padding: 64px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 16px;
+}
+
+.guide-content {
+    max-width: 780px;
+    height: auto;
+}
+
+.guide-wrap h1 {
+    padding-top: 32px;
+}
+
+.guide-wrap p {
+    line-height: 20px;
+    text-align: justify;
 }
 
 #guide-banner {
     width: 100%;
-    aspect-ratio: 2;
+    aspect-ratio: 16/9;
     border-radius: 12px;
     object-fit: cover;
 }
 
-#s-paragraph {
-    max-width: 950px;
-    text-align: justify;
-}
-
 #guide-s-img {
-    width: 260px;
-    height: 220px;
+    width: 100%;
+    aspect-ratio: 2;
     object-fit: cover;
     object-position: center right;
     border-radius: 10px;
-    float: right;
-    margin-left: 32px;
 }
 
 /* --> Locations section*/
@@ -195,21 +213,47 @@ h1 {
     align-items: center;
 }
 
+.locations-container {
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
 .locations {
-    width: 1680px;
+    max-width: 1400px;
     height: 662px;
     margin: 0;
+    float: left;
 }
 
 .locations-items {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.locations-content {
+    width: 100%;
+    margin-right: 16px;
+}
+
+.locations-content p {
+    min-width: 400px;
+    font-size: 1rem;
+    line-height: 24px;
+}
+
+.locations-content h1 {
+    font-size: 4rem;
+}
+
+.locations-items figure {
+    margin: 0;
 }
 
 .locations-items figure img {
-    width: 1106px;
-    height: 622px;
+    width: 100%;
+    aspect-ratio: 16/9;
     object-fit: cover;
     object-position: 50% 30%;
     border-radius: 12px;
@@ -226,14 +270,6 @@ h1 {
     vertical-align: bottom;
 }
 
-.locations-content p {
-    width: 528px;
-}
-
-.locations-content h1 {
-    font-size: 4rem;
-}
-
 #location-pagination {
     width: 1670px;
     margin-bottom: -8px;
@@ -242,9 +278,11 @@ h1 {
     font-size: 1rem;
 }
 
+.location-pin,
 .swiper-custom-nav {
-    margin-left: 50px;
+    margin: 0 32px;
 }
+
 
 .swiper-custom-nav svg {
     padding: 24px 0;
@@ -253,6 +291,22 @@ h1 {
 .swiper-custom-nav svg:hover {
     opacity: 0.5;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 1386px) {
+    .locations-content h1 {
+        font-size: 3rem;
+    }
+
+    .locations-content p {
+        font-size: 15px;
+        line-height: normal;
+    }
+
+    .location-pin,
+    .swiper-custom-nav{
+        margin: 0 16px;
+    }
 }
 
 /* Telescopes section*/
