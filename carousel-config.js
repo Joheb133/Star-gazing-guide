@@ -3,10 +3,6 @@ new Swiper(".locations", {
     slidesPerView: 1,
     spaceBetween: 80,
     mousewheel: true,
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'fraction'
-    },
     navigation: {
         nextEl: "#nav-down",
         prevEl: "#nav-up"
@@ -19,8 +15,6 @@ new Swiper(".locations", {
 new Swiper(".telescopes", {
     direction: 'horizontal',
     slidesPerView: "auto",
-    spaceBetween: 44,
-    centeredSlides: true,
     navigation: {
         nextEl: "#telescopes-next",
         prevEl: "#telescopes-prev"
@@ -31,7 +25,7 @@ new Swiper(".telescopes", {
 });
 
 new Swiper(".gallery-top", {
-    direction: "horizontal",
+    direction: "vertical",
     slidesPerView: "auto",
     loop: true,
     autoplay: {
@@ -39,10 +33,15 @@ new Swiper(".gallery-top", {
     },
     simulateTouch: false,
     speed: 800,
+    breakpoints: {
+        896: {
+            direction: "horizontal"
+        }
+    }
 })
 
 new Swiper(".gallery-bottom", {
-    direction: "horizontal",
+    direction: "vertical",
     slidesPerView: "auto",
     loop: true,
     autoplay: {
@@ -51,4 +50,9 @@ new Swiper(".gallery-bottom", {
     },
     simulateTouch: false,
     speed: 800,
+    breakpoints: {
+        896: {
+            direction: "horizontal"
+        }
+    }
 })

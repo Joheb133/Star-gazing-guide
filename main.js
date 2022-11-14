@@ -7,7 +7,7 @@ let rekt = anchor.getBoundingClientRect()
     , anchorX = rekt.left + rekt.width / 2
     , anchorY = rekt.top + rekt.height / 2;
 
-homeEl.addEventListener('mousemove', (e) => {
+window.addEventListener('mousemove', (e) => {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
 
@@ -50,4 +50,16 @@ function showHiddenContent() {
     } else {
         hiddenGuide.style.display = "none"
     }
+}
+
+//locations DOM manipulation
+const figcaptions = [...document.querySelectorAll('.locations-items figure figcaption')]
+
+fractionPagination();
+function fractionPagination() {
+    figcaptions.forEach ((index, i) => {
+        const span = document.createElement("span");
+        span.innerText = `${i+1}/${figcaptions.length}`
+        index.appendChild(span)
+    })
 }

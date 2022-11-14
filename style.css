@@ -79,6 +79,16 @@ h1 {
 
 #stars {
     width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+#stars circle {
+    fill: #ffffff;
+}
+
+#stars line {
+    stroke: #ffffff;
 }
 
 #stars line {
@@ -217,11 +227,12 @@ h1 {
     width: auto;
     display: flex;
     align-items: center;
+    margin: 0 16px;
 }
 
 .locations {
     max-width: 1400px;
-    height: 662px;
+    height: 500px;
     margin: 0;
     float: left;
 }
@@ -233,14 +244,13 @@ h1 {
 }
 
 .locations-content {
-    width: 100%;
+    max-width: 100%;
     margin-right: 16px;
 }
 
 .locations-content p {
     min-width: 400px;
-    font-size: 1rem;
-    line-height: 24px;
+    line-height: 21px;
 }
 
 .locations-content h1 {
@@ -251,9 +261,9 @@ h1 {
     margin: 0;
 }
 
-.locations-items figure img {
-    width: 100%;
-    aspect-ratio: 16/9;
+.locations-items figure>img {
+    width: 800px;
+    height: 450px;
     object-fit: cover;
     object-position: 50% 30%;
     border-radius: 12px;
@@ -270,17 +280,12 @@ h1 {
     vertical-align: bottom;
 }
 
-#location-pagination {
-    width: 1670px;
-    margin-bottom: -8px;
-    text-align: end;
-    font-family: monospace;
-    font-size: 1rem;
+.locations-items figcaption span {
+    float: right;
 }
 
-.location-pin,
 .swiper-custom-nav {
-    margin: 0 32px;
+    margin-left: 20px;
 }
 
 
@@ -291,22 +296,6 @@ h1 {
 .swiper-custom-nav svg:hover {
     opacity: 0.5;
     cursor: pointer;
-}
-
-@media only screen and (max-width: 1386px) {
-    .locations-content h1 {
-        font-size: 3rem;
-    }
-
-    .locations-content p {
-        font-size: 15px;
-        line-height: normal;
-    }
-
-    .location-pin,
-    .swiper-custom-nav{
-        margin: 0 16px;
-    }
 }
 
 /* Telescopes section*/
@@ -329,13 +318,14 @@ h1 {
 
 .telescopes {
     width: 1152px;
-    height: 586px;
     border-radius: 36px;
+    padding: 16px 0;
 }
 
 .cards {
     width: 348px;
     height: 568px;
+    margin-right: 44px;
     background-color: #1C1C1C;
     border-radius: 36px;
     box-shadow: 0 6px 8px rgb(0, 0, 0, 0.25);
@@ -366,6 +356,8 @@ h1 {
     float: right;
 }
 
+
+
 /* Gallery section*/
 
 .gallery-section {
@@ -378,15 +370,17 @@ h1 {
 }
 
 .gallery-section h1 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-180px, -50%) rotate(-90deg);
     font-size: 5rem;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
+    z-index: 2;
 }
 
 .gallery-wrapper {
-    width: 1272px;
-    height: 792px;
+    width: 1210px;
+    position: relative;
 }
 
 .gallery-wrapper img {
@@ -397,15 +391,22 @@ h1 {
     margin-bottom: 8px;
 }
 
+.gallery-top,
+.gallery-bottom {
+    height: 366px;
+}
+
 .long-img {
-    width: 875px;
-    height: 386px;
+    width: auto;
+    height: 100%;
+    aspect-ratio: 830/366;
     margin: 0 4px;
 }
 
 .short-img {
-    width: 386px;
-    height: 386px;
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1/1;
     margin: 0 4px;
 }
 
@@ -427,4 +428,124 @@ footer span {
     padding: 16px 0;
     display: block;
     text-align: center;
+}
+
+@media only screen and (max-width: 1386px) {
+
+    /* Locations */
+    .locations-content h1 {
+        font-size: 3rem;
+    }
+
+    .locations-content {
+        align-self: flex-start;
+    }
+
+    .locations-content p {
+        max-width: 300px;
+        font-size: 16px;
+        line-height: normal;
+    }
+
+    .locations-items figure>img {
+        width: 560px;
+        height: 315px;
+        object-fit: cover;
+        object-position: 50% 30%;
+        border-radius: 12px;
+    }
+
+    .locations-items figcaption {
+        font-size: 14px;
+    }
+
+    /* Telescopes */
+    .telescopes {
+        width: 740px;
+    }
+
+    /* Gallery */
+    .gallery-section {
+        flex-direction: column;
+    }
+
+    .gallery-wrapper {
+        width: 840px;
+    }
+
+    .gallery-top,
+    .gallery-bottom {
+        height: 256px;
+    }
+
+    .gallery-section h1 {
+        font-size: 4rem;
+        position: static;
+        transform: rotate(0deg);
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+
+    /* Locations */
+    .locations {
+        height: 800px;
+    }
+
+    .locations-items {
+        flex-direction: column-reverse;
+    }
+
+    .locations-content {
+        margin: 0 auto;
+    }
+
+    .locations-content p {
+        min-width: 560px;
+    }
+
+    /* Telescope */
+
+    .telescopes {
+        width: 538px;
+    }
+
+    .cards {
+        width: 258px;
+        height: 424px;
+        margin-right: 22px;
+    }
+
+}
+
+@media only screen and (max-width: 896px) {
+    .gallery-wrapper {
+        width: 520px;
+        height: 840px;
+    }
+
+    .gallery-top {
+        width: 256px;
+        height: 736px;
+        float: left;
+        margin: 0 8px 0 0;
+    }
+    .gallery-bottom {
+        width: 256px;
+        height: 736px;
+        float: right;
+    }
+
+    .short-img {
+        width: 256px;
+        height: 256px;
+        margin: 4px 0;
+    }
+
+    .long-img {
+        width: 256px;
+        height: 480px;
+        margin: 4px 0;
+    }
 }
