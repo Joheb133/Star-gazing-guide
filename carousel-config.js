@@ -1,5 +1,5 @@
-new Swiper(".locations", {
-    direction: 'vertical',
+const locations = new Swiper(".locations", {
+    direction: 'horizontal',
     slidesPerView: 1,
     spaceBetween: 80,
     mousewheel: true,
@@ -7,12 +7,17 @@ new Swiper(".locations", {
         nextEl: "#nav-down",
         prevEl: "#nav-up"
     },
+    breakpoints: {
+        720: {
+            direction: "vertical"
+        }
+    },
     speed: 800,
     loop: true,
     simulateTouch: false,
 });
 
-new Swiper(".telescopes", {
+const telescope = new Swiper(".telescopes", {
     direction: 'horizontal',
     slidesPerView: "auto",
     navigation: {
@@ -24,7 +29,7 @@ new Swiper(".telescopes", {
     simulateTouch: false,
 });
 
-new Swiper(".gallery-top", {
+const galleryTop = new Swiper(".gallery-top", {
     direction: "vertical",
     slidesPerView: "auto",
     loop: true,
@@ -40,7 +45,7 @@ new Swiper(".gallery-top", {
     }
 })
 
-new Swiper(".gallery-bottom", {
+const galleryBottom = new Swiper(".gallery-bottom", {
     direction: "vertical",
     slidesPerView: "auto",
     loop: true,

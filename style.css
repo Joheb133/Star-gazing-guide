@@ -78,7 +78,7 @@ h1 {
 }
 
 #stars {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     box-sizing: border-box;
 }
@@ -284,12 +284,12 @@ h1 {
     float: right;
 }
 
-.swiper-custom-nav {
+.locations-section .swiper-custom-nav {
     margin-left: 20px;
 }
 
 
-.swiper-custom-nav svg {
+.locations-section .swiper-custom-nav svg {
     padding: 24px 0;
 }
 
@@ -297,6 +297,8 @@ h1 {
     opacity: 0.5;
     cursor: pointer;
 }
+
+
 
 /* Telescopes section*/
 
@@ -431,7 +433,6 @@ footer span {
 }
 
 @media only screen and (max-width: 1386px) {
-
     /* Locations */
     .locations-content h1 {
         font-size: 3rem;
@@ -520,6 +521,22 @@ footer span {
 }
 
 @media only screen and (max-width: 896px) {
+
+    /* Home */
+    .left-bg {
+        width: 100%;
+    }
+
+    .right-bg {
+        display: none;
+    }
+
+    /* Guide */
+    .guide-wrap {
+        padding: 64px 32px;
+    }
+
+    /* Gallery */
     .gallery-wrapper {
         width: 520px;
         height: 840px;
@@ -547,5 +564,35 @@ footer span {
         width: 256px;
         height: 480px;
         margin: 4px 0;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+
+    /* Locations */
+    .locations-container {
+        flex-direction: column;
+    }
+
+    .locations {
+        max-width: 560px;
+        width: 100%;
+    }
+
+    .locations-container .swiper-custom-nav {
+        transform: rotate(-90deg);
+    }
+    
+    .locations-items figure {
+        width: 100%;
+    }
+    .locations-items figure>img {
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+
+    /* Telescopes */
+    .telescopes {
+        width: 258px;
     }
 }
