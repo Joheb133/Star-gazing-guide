@@ -173,7 +173,6 @@ h1 {
 
 .guide-wrap p {
     line-height: 20px;
-    text-align: justify;
 }
 
 #guide-banner {
@@ -248,15 +247,13 @@ h1 {
     border-radius: 12px;
 }
 
-.locations figcaption {
+.locations figcaption * {
+    float: left;
     margin-top: 16px;
 }
 
 .locations-items figcaption img {
-    width: auto;
-    height: auto;
     object-fit: contain;
-    vertical-align: bottom;
 }
 
 .locations-items figcaption span {
@@ -266,7 +263,6 @@ h1 {
 .locations-section .swiper-custom-nav {
     margin-left: 20px;
 }
-
 
 .locations-section .swiper-custom-nav svg {
     padding: 24px 0;
@@ -432,7 +428,8 @@ footer span {
         height: 315px;
     }
 
-    .locations-items figcaption {
+    .locations-items figcaption > * {
+        height: 14px;
         font-size: 14px;
     }
 
@@ -566,19 +563,40 @@ footer span {
 }
 
 @media only screen and (max-width: 596px) {
-    .locations-list-wrapper {
-        width: 100vw;
+    .locations {
+        width: 95vw;
     }
 
-    .locations {
-        width: 100%;
+    .locations-content h1 {
+        font-size: 2rem;
+        margin-top: 8px;
     }
 
     .locations-content p {
-        min-width: 0;
+        min-width: initial;
+        max-width: initial;
     }
 
     .locations figure {
+        width: 100%;
+    }
+
+    .locations figure > img {
+        width: 100%;
+        height: initial;
+        aspect-ratio: 16/9;
+    }
+
+    .locations figcaption {
+        opacity: 0.5;
+    }
+
+    .locations-container .swiper-custom-nav {
+        display: none;
+    }
+
+    .telescopes-section,
+    .gallery-section {
         display: none;
     }
 

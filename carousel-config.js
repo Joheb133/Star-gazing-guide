@@ -1,7 +1,7 @@
 const locations = new Swiper(".locations", {
     direction: 'horizontal',
     slidesPerView: 1,
-    spaceBetween: 80,
+    spaceBetween: 800,
     mousewheel: true,
     navigation: {
         nextEl: "#nav-down",
@@ -12,7 +12,7 @@ const locations = new Swiper(".locations", {
             direction: "vertical",
         }
     },
-    speed: 800,
+    speed: 1500,
     loop: true,
     simulateTouch: false,
 });
