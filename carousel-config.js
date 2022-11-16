@@ -9,7 +9,7 @@ const locations = new Swiper(".locations", {
     },
     breakpoints: {
         720: {
-            direction: "vertical"
+            direction: "vertical",
         }
     },
     speed: 800,

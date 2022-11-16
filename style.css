@@ -85,33 +85,12 @@ h1 {
 
 #stars circle {
     fill: #ffffff;
+    filter: drop-shadow(0 0 0.5rem rgb(255, 255, 255));
 }
 
 #stars line {
     stroke: #ffffff;
-}
-
-#stars line {
     opacity: 0;
-}
-
-#stars circle {
-    animation-name: star-glow;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes star-glow {
-
-    from,
-    to {
-        filter: drop-shadow(0 0 0.5rem rgb(255, 255, 255));
-    }
-
-    50% {
-        filter: drop-shadow(0 0 0.1rem rgb(255, 255, 255));
-    }
 }
 
 #canes-venatici line {
@@ -451,9 +430,6 @@ footer span {
     .locations-items figure>img {
         width: 560px;
         height: 315px;
-        object-fit: cover;
-        object-position: 50% 30%;
-        border-radius: 12px;
     }
 
     .locations-items figcaption {
@@ -570,29 +546,40 @@ footer span {
 @media only screen and (max-width: 720px) {
 
     /* Locations */
+
     .locations-container {
         flex-direction: column;
     }
 
     .locations {
         max-width: 560px;
-        width: 100%;
     }
 
     .locations-container .swiper-custom-nav {
         transform: rotate(-90deg);
-    }
-    
-    .locations-items figure {
-        width: 100%;
-    }
-    .locations-items figure>img {
-        width: 100%;
-        aspect-ratio: 16/9;
     }
 
     /* Telescopes */
     .telescopes {
         width: 258px;
     }
+}
+
+@media only screen and (max-width: 596px) {
+    .locations-list-wrapper {
+        width: 100vw;
+    }
+
+    .locations {
+        width: 100%;
+    }
+
+    .locations-content p {
+        min-width: 0;
+    }
+
+    .locations figure {
+        display: none;
+    }
+
 }
